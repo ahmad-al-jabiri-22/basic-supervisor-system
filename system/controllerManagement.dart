@@ -30,14 +30,13 @@ class Controllermanagement {
     print("${emp.name} assinged to ${sup.name}");
   }
 
-  void displayEmployeeInfo(int employeeID) {
-    final emp = list_of_all_employees.firstWhere(
-      (e) => e.id == employeeID,
-      orElse: () => throw Exception("this id $employeeID didn't exist"),
-    );
-
-    print("********display Employee Info**********");
-    print(emp.supervisor!.name);
+  void displayAllEmployeeInfo() {
+      print("********display all Employees Info**********");    
+    for(var e in list_of_all_employees)
+    {
+      print("His id is ${e.id} and his name is ${e.name} and his supervisor is ${e.supervisor!.name}.");
+    }
+    
   }
 
   void checkIn(int employeeID) {
@@ -47,6 +46,5 @@ class Controllermanagement {
     );
     employee.checkInHour = DateTime.now();
     print("the employee name ${employee.name} check-in: ${employee.checkInHour}");
-
   }
 }

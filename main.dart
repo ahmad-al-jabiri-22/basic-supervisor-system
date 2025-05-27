@@ -12,6 +12,7 @@ void main() {
   var employee5 = Employee(id: 5, name: "vvvvv");
 
   var supervisor1 = Supervisor(id: 1, name: "majd");
+  var supervisor2 = Supervisor(id: 1, name: "abd");
 
   system.addEmployee(employee1);
   system.addEmployee(employee2);
@@ -39,4 +40,8 @@ employee1.displayEmployeeInfo();
   }
 employee2.displayEmployeeInfo();
 
+supervisor2.displayInfo();
+
+
+system.displayAllEmployeeInfo();
 }

@@ -14,8 +14,8 @@ class Employee {
     print("the name is ${name}");
     if (supervisor != null) {
       print("The supervisor name is ${supervisor?.name}");
-    }else{
-    print("He doesn't have a supervisor yet.");
+    } else {
+      print("He doesn't have a supervisor yet.");
     }
     print("Check-in time: ${checkInHour}");
     print("***************************************");
