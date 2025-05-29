@@ -6,10 +6,10 @@ void main() {
   var system = Controllermanagement();
 
   var employee1 = Employee(id: 1, name: "ahmad");
-  var employee2 = Employee(id: 2, name: "aaaaaaaa");
-  var employee3 = Employee(id: 3, name: "dddddd");
-  var employee4 = Employee(id: 4, name: "sssssssss");
-  var employee5 = Employee(id: 5, name: "vvvvv");
+  var employee2 = Employee(id: 2, name: "mohammad");
+  var employee3 = Employee(id: 3, name: "ibrahim");
+  var employee4 = Employee(id: 4, name: "sara");
+  var employee5 = Employee(id: 5, name: "noor");
 
   var supervisor1 = Supervisor(id: 1, name: "majd");
   var supervisor2 = Supervisor(id: 1, name: "abd");
@@ -21,6 +21,7 @@ void main() {
   system.addEmployee(employee5);
 
   system.addSupervisor(supervisor1);
+  system.addSupervisor(supervisor2);
 
   system.assiginEmployee(1, 1);
   system.assiginEmployee(2, 1);
@@ -44,4 +45,6 @@ supervisor2.displayInfo();
 
 
 system.displayAllEmployeeInfo();
+
+system.displayAllSupervisorInfo();
 }

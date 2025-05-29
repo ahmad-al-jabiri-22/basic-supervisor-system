@@ -1,4 +1,3 @@
-
 import '../model/employee.dart';
 import '../model/supervisor.dart';
 
@@ -31,12 +30,19 @@ class Controllermanagement {
   }
 
   void displayAllEmployeeInfo() {
-      print("********display all Employees Info**********");    
-    for(var e in list_of_all_employees)
-    {
-      print("His id is ${e.id} and his name is ${e.name} and his supervisor is ${e.supervisor!.name}.");
+    print("********display all Employees Info**********");
+    for (var e in list_of_all_employees) {
+      print(
+        "His id is ${e.id} and his name is ${e.name} and his supervisor is ${e.supervisor?.name}.",
+      );
     }
-    
+  }void displayAllSupervisorInfo() {
+    print("********display all Employees Info**********");
+    for (var e in list_of_all_supervisor) {
+      print(
+        "His id is ${e.id} and his name is ${e.name}.",
+      );
+    }
   }
 
   void checkIn(int employeeID) {
@@ -45,6 +51,8 @@ class Controllermanagement {
       orElse: () => throw Exception("this id $employeeID didn't exist"),
     );
     employee.checkInHour = DateTime.now();
-    print("the employee name ${employee.name} check-in: ${employee.checkInHour}");
+    print(
+      "the employee name ${employee.name} check-in: ${employee.checkInHour}",
+    );
   }
 }
